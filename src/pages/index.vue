@@ -2,6 +2,7 @@
   <div>
     <button @click="switchLang">{{ t('app_name') }}</button>
     <AppIcon/>
+    <router-link to="/about">{{ t('about') }}</router-link>
   </div>
 </template>
 <script lang="ts">

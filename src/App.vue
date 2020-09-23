@@ -1,15 +1,12 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <div class="px-4 py-10 text-center text-gray-700 dark:text-gray-200">
+    <router-view />
+  </div>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
+<script lang="ts">
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  setup() {
+    console.log('app created')
+  },
 }
 </script>

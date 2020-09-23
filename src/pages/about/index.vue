@@ -1,6 +1,13 @@
 <template>
   <div>
-    <router-link to="/about">{{ t('about') }}</router-link>
+    <div>
+      <router-link to="/">
+        <label class="text-blue-500">{{ t('home') }}</label>
+      </router-link>
+      <span class="p-1">|</span>
+      <span>{{ t('about') }}</span>
+    </div>
+    <h1 class="font-sans text-lg text-gray-800 text-center m-3">{{ t('about_msg') }}</h1>
   </div>
 </template>
 <script lang="ts">

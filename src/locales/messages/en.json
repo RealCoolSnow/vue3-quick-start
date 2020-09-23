@@ -1,5 +1,7 @@
 {
     "app_name": "Vue3 Demo",
     "language": "Languages",
-    "about": "About"
+    "home": "Home",
+    "about": "About",
+    "about_msg": "this is about page"
 }

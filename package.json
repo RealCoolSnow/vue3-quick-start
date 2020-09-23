@@ -1,6 +1,13 @@
 {
   "name": "vue3-quick-start",
-  "version": "0.0.0",
+  "description": "A quick start project with vue3 & vite",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "CoolSnow",
+    "email": "coolsnow2020@gmail.com"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build"

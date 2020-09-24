@@ -10,8 +10,8 @@ import { i18n } from './locale'
 const app = createApp(App)
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
+  history: createWebHistory(),
+  routes,
 })
 
 app.use(i18n)

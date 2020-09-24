@@ -1,6 +1,6 @@
 {
   "name": "vue3-quick-start",
-  "description": "Quick start project with vue3 & vite",
+  "description": "Quick start project with Vue3 & Vite & TypeScript.",
   "version": "0.0.1",
   "private": true,
   "author": "CoolSnow(coolsnow2020@gmail.com)",

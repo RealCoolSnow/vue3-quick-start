@@ -14,7 +14,6 @@ service.interceptors.request.use((config) => {
     ...config.params,
     lang: store.state.locale,
   }
-  console.log('config - ', config)
   return config
 }, (error) => {
   Promise.reject(error)

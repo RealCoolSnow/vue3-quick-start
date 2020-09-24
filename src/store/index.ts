@@ -9,10 +9,12 @@ const debug = process.env.NODE_ENV !== 'production'
 
 export type State = {
   counter: number
+  locale: string
 }
 
 const state: State = {
   counter: 0,
+  locale: 'en',
 }
 
 export enum MutationTypes {
@@ -53,11 +55,11 @@ export const actions: ActionTree<State, State> & Actions = {
   },
 }
 export type Getters = {
-  doubleCounter(state: State): number
+  getCounter(state: State): number
 }
 
 export const getters: GetterTree<State, State> & Getters = {
-  doubleCounter: state => state.counter * 2,
+  getCounter: state => state.counter,
 }
 
 export type Store = Omit<

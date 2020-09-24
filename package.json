@@ -6,7 +6,7 @@
   "author": "CoolSnow(coolsnow2020@gmail.com)",
   "license": "MIT",
   "scripts": {
-    "dev": "vite --port 3001 --open",
+    "dev": "cross-env NODE_ENV=development vite --port 3001 --open",
     "build": "cross-env NODE_ENV=production vite build"
   },
   "dependencies": {

@@ -1,16 +1,16 @@
 <p align='center'>
-Quick start project with vue3 & vite.
+Quick start project with Vue3 & Vite & TypeScript.<br/>
 </p>
 
 ## Features
 
-- Vue3，Vite，ESlint -  born with fastness
+- Vue3, Vite, ESlint -  born with fastness
 
 - File based routing
 
-- TailwindCSS - CSS framework for rapid UI development
+- i18n, axios ready - works out-of-box
 
-- i18n ready - works out-of-box
+- TailwindCSS - CSS framework for rapid UI development
 
 - TypeScript, of course
 
@@ -26,9 +26,11 @@ Quick start project with vue3 & vite.
 
 - [vueuse](https://github.com/antfu/vueuse) - Collection of Composition API utils
 
-- [vuex](https://github.com/vuejs/vuex/tree/4.0)
+- [vuex 4.0](https://github.com/vuejs/vuex/tree/4.0)
 
-- vue-i18n
+- [axios](https://github.com/axios/axios)
+
+- [vue-i18n](https://github.com/kazupon/vue-i18n)
 
 ## Usage
 

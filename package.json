@@ -32,10 +32,6 @@
     "vite-plugin-voie": "^0.4.0",
     "voie-pages": "^0.4.0"
   },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
-  },
   "eslintConfig": {
     "extends": "@antfu/eslint-config-vue"
   }

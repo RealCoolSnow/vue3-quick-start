@@ -26,6 +26,8 @@ Quick start project with vue3 & vite.
 
 - [vueuse](https://github.com/antfu/vueuse) - Collection of Composition API utils
 
+- [vuex](https://github.com/vuejs/vuex/tree/4.0)
+
 - vue-i18n
 
 ## Usage

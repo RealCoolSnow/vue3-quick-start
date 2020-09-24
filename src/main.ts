@@ -6,6 +6,7 @@ import routes from 'voie-pages'
 
 import App from './App.vue'
 import { i18n } from './locale'
+import { store } from './store'
 
 const app = createApp(App)
 
@@ -16,5 +17,6 @@ const router = createRouter({
 
 app.use(i18n)
 app.use(router)
+app.use(store)
 
 app.mount('#app')

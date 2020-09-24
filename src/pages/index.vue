@@ -9,14 +9,23 @@
   </div>
   <Logo />
   <h1>{{ t('app_name') }}</h1>
+  <button class="border-2 px-1 m-2 text-red-400" @click="inc">
+    counter - {{ counter }}
+  </button>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { MutationTypes, useStore } from '../store'
 export default defineComponent({
   setup() {
     const { t } = useI18n()
-    return { t }
+    const store = useStore()
+    const counter = computed(() => store.state.counter)
+    const inc = () => {
+      store.commit(MutationTypes.INC_COUNTER, 1)
+    }
+    return { t, counter, inc }
   },
 })
 </script>

@@ -6,7 +6,7 @@ import routes from 'voie-pages'
 
 import App from './App.vue'
 import { i18n } from './locale'
-import { store } from './store'
+import store from './store'
 
 const app = createApp(App)
 

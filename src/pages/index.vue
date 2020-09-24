@@ -16,7 +16,8 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { MutationTypes, useStore } from '../store'
+import { useStore } from 'vuex'
+import { MutationTypes } from '../store'
 // import { useHttpTest } from '../service/api-test'
 export default defineComponent({
   setup() {

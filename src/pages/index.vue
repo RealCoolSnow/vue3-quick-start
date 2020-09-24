@@ -7,7 +7,7 @@
       <label class="text-blue-500">{{ t('about') }}</label>
     </router-link>
   </div>
-  <AppIcon />
+  <Logo />
   <h1>{{ t('app_name') }}</h1>
 </template>
 <script lang="ts">

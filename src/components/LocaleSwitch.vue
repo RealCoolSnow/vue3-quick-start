@@ -10,8 +10,8 @@ import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   setup() {
-    const { t, locale } = useI18n()
-    return { t, locale }
+    const { locale } = useI18n()
+    return { locale }
   }
 })
 </script>

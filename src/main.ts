@@ -5,7 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'voie-pages'
 
 import App from './App.vue'
-import { i18n } from './locales'
+import { i18n } from './locale'
 
 const app = createApp(App)
 

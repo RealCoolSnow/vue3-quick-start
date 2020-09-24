@@ -7,8 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --port 3001 --open",
-    "build": "cross-env NODE_ENV=production vite build",
-    "lint": "eslint --ext .ts,.js,.vue src --fix"
+    "build": "cross-env NODE_ENV=production vite build"
   },
   "dependencies": {
     "js-cookie": "^2.2.1",

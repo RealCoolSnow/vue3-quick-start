@@ -1,7 +1,11 @@
 <template>
   <select v-model="locale" class="m-6">
-    <option value="en">en</option>
-    <option value="zh-CN">zh-CN</option>
+    <option value="en">
+      en
+    </option>
+    <option value="zh-CN">
+      zh-CN
+    </option>
   </select>
 </template>
 <script lang="ts">
@@ -12,6 +16,6 @@ export default defineComponent({
   setup() {
     const { locale } = useI18n()
     return { locale }
-  }
+  },
 })
 </script>

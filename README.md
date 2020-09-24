@@ -14,6 +14,8 @@ Quick start project with vue3 & vite.
 
 - TypeScript, of course
 
+- [Composition api](https://composition-api.vuejs.org/)
+
 ## Plugins
 
 - [vite-plugin-voie](https://github.com/vamplate/vite-plugin-voie) - File system-based routing plugin.

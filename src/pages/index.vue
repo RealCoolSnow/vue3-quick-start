@@ -17,19 +17,18 @@
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStore } from 'vuex'
-import { MutationTypes } from '../store'
+import MutationTypes from '../store/mutation-types'
 // import { useHttpTest } from '../service/api-test'
 export default defineComponent({
   setup() {
     const { t } = useI18n()
     const store = useStore()
-    const counter = computed(() => store.state.counter)
+    const counter = computed(() => store.getters.counter)
     const inc = () => {
-      store.commit(MutationTypes.INC_COUNTER, 1)
+      store.commit(MutationTypes.APP.SET_COUNTER, 1)
     }
     // useHttpTest()
     return { t, counter, inc }
   },
 })
-
 </script>

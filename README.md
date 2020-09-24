@@ -24,6 +24,8 @@ Quick start project with vue3 & vite.
 
 - [tailwindcss](https://github.com/tailwindlabs/tailwindcss) - A utility-first CSS framework for rapid UI development.
 
+- [vueuse](https://github.com/antfu/vueuse) - Collection of Composition API utils
+
 - vue-i18n
 
 ## Usage

@@ -3,6 +3,9 @@
     "octref.vetur",
     "antfu.i18n-ally",
     "dbaeumer.vscode-eslint",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "mrmlnc.vscode-autoprefixer"
   ]
 }

@@ -10,6 +10,7 @@
     "build": "cross-env NODE_ENV=production vite build"
   },
   "dependencies": {
+    "@vueuse/core": "^4.0.0-beta.16",
     "js-cookie": "^2.2.1",
     "vue": "^3.0.0-rc.1",
     "vue-i18n": "^9.0.0-beta.1",

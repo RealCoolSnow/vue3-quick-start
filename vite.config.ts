@@ -11,7 +11,9 @@ const alias = {
 const config: UserConfig = {
     alias,
     plugins: [
-        Voie(),
+        Voie({
+            importMode: 'sync',
+        }),
         ViteComponents({
             // currently, vite does not provide an API for plugins to get the config https://github.com/vitejs/vite/issues/738
             // as the `alias` changes the behavior of middlewares, you have to pass it to ViteComponents to do the resolving

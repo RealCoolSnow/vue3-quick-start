@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { store } from '../store'
+import store from '../store'
 
 const baseURL: string = import.meta.env.VITE_BASE_URL?.toString() || ''
 
@@ -12,7 +12,7 @@ const service = axios.create({
 service.interceptors.request.use((config) => {
   config.params = {
     ...config.params,
-    lang: store.state.locale,
+    lang: store.getters.language,
   }
   return config
 }, (error) => {

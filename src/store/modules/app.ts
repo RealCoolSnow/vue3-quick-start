@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Commit } from 'vuex'
+import ActionTypes from '../action-types'
 import MutationTypes from '../mutation-types'
 
 const app = {
@@ -6,7 +10,7 @@ const app = {
     language: sessionStorage.getItem('language') || 'en',
   },
   mutations: {
-    [MutationTypes.APP.SET_LANGUAGE]: (state: any, language: any) => {
+    [MutationTypes.APP.SET_LANGUAGE]: (state: any, language: string) => {
       state.language = language
       sessionStorage.setItem('language', language)
     },
@@ -15,7 +19,9 @@ const app = {
     },
   },
   actions: {
-
+    [ActionTypes.APP.SET_LANGUAGE](context: { commit: Commit }, language: string) {
+      context.commit(MutationTypes.APP.SET_LANGUAGE, language)
+    },
   },
   getters: {
 

@@ -5,18 +5,19 @@ import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'voie-pages'
 
 import App from './App.vue'
-import { i18n } from './locale'
+import { createI18nWithLocale } from './locale'
 import store from './store'
-
-const app = createApp(App)
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
 })
 
+const i18n = createI18nWithLocale(store.getters.language)
+
+const app = createApp(App)
+app.use(store)
 app.use(i18n)
 app.use(router)
-app.use(store)
 
 app.mount('#app')

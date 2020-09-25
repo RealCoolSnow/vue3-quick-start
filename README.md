@@ -22,8 +22,6 @@
 
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components) - On-demand components auto-importing
 
-- [vite-plugin-svg](https://github.com/visualfanatic/vite-plugin-svg) - Use SVG files as Vue components with Vite
-
 - [tailwindcss](https://github.com/tailwindlabs/tailwindcss) - A utility-first CSS framework for rapid UI development
 
 - [vueuse](https://github.com/antfu/vueuse) - Collection of Composition API utils

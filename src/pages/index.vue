@@ -7,7 +7,8 @@
       <label class="text-blue-500">{{ t('about') }}</label>
     </router-link>
   </div>
-  <Logo />
+  <!-- <img src="/@/assets/svg/logo.svg" class="logo-icon mx-auto m-4"> -->
+  <Icon name="logo" class="logo-icon mx-auto m-4" />
   <h1 @click="showAbout">
     {{ t('app_name') }}
   </h1>
@@ -40,3 +41,8 @@ export default defineComponent({
   },
 })
 </script>
+<style>
+.logo-icon {
+  width: 12em;
+}
+</style>

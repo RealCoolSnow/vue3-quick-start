@@ -39,3 +39,11 @@
 1. Clone this repository
 2. npm install
 3. npm run dev
+
+# Author
+
+CoolSnow
+
+Email: coolsnow2020@gmail.com
+
+Twitter: https://twitter.com/CoolSnow0927

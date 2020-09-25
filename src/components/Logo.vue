@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { VueComponent as LogoSvg } from '/@/assets/logo.svg'
+import { VueComponent as LogoSvg } from '/@/assets/svg/logo.svg'
 
 export default defineComponent({
   components: {

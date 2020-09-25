@@ -12,7 +12,7 @@ Quick start project with Vue3 & Vite & TypeScript.<br/>
 
 - TailwindCSS - CSS framework for rapid UI development
 
-- TypeScript, of course
+- TypeScript
 
 - [Composition api](https://composition-api.vuejs.org/)
 
@@ -21,6 +21,8 @@ Quick start project with Vue3 & Vite & TypeScript.<br/>
 - [vite-plugin-voie](https://github.com/vamplate/vite-plugin-voie) - File system-based routing plugin.
 
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components) - On-demand components auto-importing.
+
+- [vite-plugin-svg])(https://github.com/visualfanatic/vite-plugin-svg) - Use SVG files as Vue components with Vite
 
 - [tailwindcss](https://github.com/tailwindlabs/tailwindcss) - A utility-first CSS framework for rapid UI development.
 

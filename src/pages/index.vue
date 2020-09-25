@@ -8,7 +8,9 @@
     </router-link>
   </div>
   <Logo />
-  <h1>{{ t('app_name') }}</h1>
+  <h1 @click="showAbout">
+    {{ t('app_name') }}
+  </h1>
   <button class="border-2 px-1 m-2 text-red-400" @click="inc">
     counter - {{ counter }}
   </button>
@@ -16,6 +18,7 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import MutationTypes from '../store/mutation-types'
 
@@ -24,12 +27,16 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     const store = useStore()
+    const router = useRouter()
     const counter = computed(() => store.getters.counter)
     const inc = () => {
       store.commit(MutationTypes.APP.SET_COUNTER, 1)
     }
+    const showAbout = () => {
+      router.push('/about')
+    }
     // useHttpTest()
-    return { t, counter, inc }
+    return { t, counter, inc, showAbout }
   },
 })
 </script>

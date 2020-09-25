@@ -1,5 +1,5 @@
 <p align='center'>
-Quick start project with Vue3 & Vite & TypeScript.<br/>
+⚡️Quick start project with Vue3 & Vite & TypeScript.<br/>
 </p>
 
 ## Features
@@ -22,7 +22,7 @@ Quick start project with Vue3 & Vite & TypeScript.<br/>
 
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components) - On-demand components auto-importing.
 
-- [vite-plugin-svg])(https://github.com/visualfanatic/vite-plugin-svg) - Use SVG files as Vue components with Vite
+- [vite-plugin-svg](https://github.com/visualfanatic/vite-plugin-svg) - Use SVG files as Vue components with Vite
 
 - [tailwindcss](https://github.com/tailwindlabs/tailwindcss) - A utility-first CSS framework for rapid UI development.
 

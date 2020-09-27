@@ -8,6 +8,7 @@ export const useHttpTest = () => {
   })
   helloPost().then((res) => {
     console.log(res)
+    alert(JSON.stringify(res))
   }).catch((e) => {
     console.log(e)
   })

@@ -5,6 +5,7 @@ import { UserConfig } from 'vite'
 import ViteComponents from 'vite-plugin-components'
 import Voie from 'vite-plugin-voie'
 import PurgeIcons from 'vite-plugin-purge-icons'
+import { createMockServer } from 'vite-plugin-mock'
 
 const alias = {
   '/@/': path.resolve(__dirname, 'src'),
@@ -26,6 +27,11 @@ const config: UserConfig = {
       deep: true,
     }),
     PurgeIcons(),
+    createMockServer({
+      mockPath: 'mock',
+      watchFiles: true,
+      localEnabled: process.env.NODE_ENV === 'development',
+    }),
   ],
 }
 

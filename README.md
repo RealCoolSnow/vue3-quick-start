@@ -8,7 +8,7 @@
 
 - [File based routing](https://github.com/vamplate/vite-plugin-voie)
 
-- i18n, axios, store - works out-of-box
+- i18n, store, axios, [mock](https://github.com/anncwb/vite-plugin-mock)  - works out-of-box
 
 - [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) - CSS framework for rapid UI development
 
@@ -21,6 +21,8 @@
 - [vite-plugin-voie](https://github.com/vamplate/vite-plugin-voie) - File system-based routing plugin
 
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components) - On-demand components auto-importing
+
+- [vite-plugin-mock](https://github.com/anncwb/vite-plugin-mock) - A mock plugin for vite.use mockjs and koa
 
 - [tailwindcss](https://github.com/tailwindlabs/tailwindcss) - A utility-first CSS framework for rapid UI development
 

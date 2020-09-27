@@ -15,6 +15,9 @@
   <button class="border-2 px-1 m-2 text-red-400" @click="inc">
     counter - {{ counter }}
   </button>
+  <button class="border-2 px-1 m-2 text-blue-400" @click="mockTest">
+    mock test
+  </button>
 </template>
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
@@ -23,7 +26,7 @@ import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import MutationTypes from '../store/mutation-types'
 
-// import { useHttpTest } from '../test/api-test'
+import { useHttpTest } from '../test/api-test'
 export default defineComponent({
   setup() {
     const { t } = useI18n()
@@ -36,8 +39,10 @@ export default defineComponent({
     const showAbout = () => {
       router.push('/about')
     }
-    // useHttpTest()
-    return { t, counter, inc, showAbout }
+    const mockTest = () => {
+      useHttpTest()
+    }
+    return { t, counter, inc, showAbout, mockTest }
   },
 })
 </script>

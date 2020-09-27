@@ -8,7 +8,7 @@
 
 - File based routing
 
-- i18n, axios ready - works out-of-box
+- i18n, axios, store - works out-of-box
 
 - TailwindCSS - CSS framework for rapid UI development
 

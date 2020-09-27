@@ -18,6 +18,12 @@ const config: UserConfig = {
     }),
     ViteComponents({
       alias,
+      // Relative paths to the directory to search for components.
+      dirs: ['src/components'],
+      // Valid file extensions for components.
+      extensions: ['vue'],
+      // Search for subdirectories
+      deep: true,
     }),
     PurgeIcons(),
   ],

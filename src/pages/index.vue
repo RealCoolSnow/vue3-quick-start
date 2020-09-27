@@ -23,7 +23,7 @@ import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import MutationTypes from '../store/mutation-types'
 
-// import { useHttpTest } from '../service/api-test'
+// import { useHttpTest } from '../test/api-test'
 export default defineComponent({
   setup() {
     const { t } = useI18n()

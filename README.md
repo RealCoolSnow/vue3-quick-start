@@ -4,13 +4,13 @@
 
 ## Features
 
-- Vue3, Vite, ESlint -  born with fastness
+- Vue3, [Vite](https://github.com/vitejs/vite), ESlint -  born with fastness
 
-- File based routing
+- [File based routing](https://github.com/vamplate/vite-plugin-voie)
 
 - i18n, axios, store - works out-of-box
 
-- TailwindCSS - CSS framework for rapid UI development
+- [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) - CSS framework for rapid UI development
 
 - TypeScript
 

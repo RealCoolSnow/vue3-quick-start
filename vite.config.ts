@@ -13,6 +13,7 @@ const alias = {
 
 const config: UserConfig = {
   alias,
+  esbuildTarget: 'es2015',
   plugins: [
     Voie({
       importMode: 'sync',

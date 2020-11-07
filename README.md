@@ -16,6 +16,10 @@
 
 - [Composition api](https://composition-api.vuejs.org/)
 
+## UI framework
+
+- [Vant](https://vant-contrib.gitee.io/vant/next/)
+
 ## Plugins
 
 - [vite-plugin-voie](https://github.com/vamplate/vite-plugin-voie) - File system-based routing plugin

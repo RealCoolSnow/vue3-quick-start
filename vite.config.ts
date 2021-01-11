@@ -1,34 +1,28 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-unused-vars */
 import path from 'path'
+import Vue from '@vitejs/plugin-vue'
 import { UserConfig } from 'vite'
 import ViteComponents from 'vite-plugin-components'
 import Voie from 'vite-plugin-voie'
-import PurgeIcons from 'vite-plugin-purge-icons'
-import { createMockServer } from 'vite-plugin-mock'
+import { viteMockServe } from 'vite-plugin-mock'
 
 const alias = {
-  '/@/': path.resolve(__dirname, 'src'),
+  '/@': path.resolve(__dirname, 'src'),
 }
-
+// doc#https://vitejs.dev/config/#config-file
 const config: UserConfig = {
   alias,
-  esbuildTarget: 'es2015',
+  build: {
+    target: 'es2015',
+  },
   plugins: [
+    Vue(),
     Voie({
       importMode: 'sync',
     }),
-    ViteComponents({
-      alias,
-      // Relative paths to the directory to search for components.
-      dirs: ['src/components'],
-      // Valid file extensions for components.
-      extensions: ['vue'],
-      // Search for subdirectories
-      deep: true,
-    }),
-    PurgeIcons(),
-    createMockServer({
+    ViteComponents(),
+    viteMockServe({
       mockPath: 'mock',
       watchFiles: true,
       localEnabled: process.env.NODE_ENV === 'development',

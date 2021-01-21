@@ -18,16 +18,22 @@
   <button class="border-2 px-1 m-2 text-blue-400" @click="mockTest">
     mock test
   </button>
+  <icon-female />
+  <icon-male />
 </template>
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
+import { Female, Male } from '@icon-park/vue-next'
 import MutationTypes from '../store/mutation-types'
-
 import { useHttpTest } from '../test/api-test'
 export default defineComponent({
+  components: {
+    'icon-female': Female,
+    'icon-male': Male,
+  },
   setup() {
     const { t } = useI18n()
     const store = useStore()

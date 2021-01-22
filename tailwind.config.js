@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: false, // or 'media' or 'class'
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [
@@ -15,4 +16,8 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
 }

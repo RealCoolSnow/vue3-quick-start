@@ -6,7 +6,7 @@ import { UserConfig } from 'vite'
 import ViteComponents from 'vite-plugin-components'
 import Voie from 'vite-plugin-voie'
 import { viteMockServe } from 'vite-plugin-mock'
-
+import WindiCSS from 'vite-plugin-windicss'
 const alias = {
   '/@': path.resolve(__dirname, 'src'),
 }
@@ -18,6 +18,9 @@ const config: UserConfig = {
   },
   plugins: [
     Vue(),
+    WindiCSS({
+      safelist: 'no-select',
+    }),
     Voie({
       importMode: 'sync',
     }),

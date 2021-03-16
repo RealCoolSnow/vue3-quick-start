@@ -9,7 +9,7 @@
   </div>
   <!-- <img src="/@/assets/svg/logo.svg" class="logo-icon mx-auto m-4"> -->
   <Icon name="logo" class="logo-icon mx-auto m-4" />
-  <h1 @click="showAbout">
+  <h1 class="text-red-500" @click="showAbout">
     {{ t('app_name') }}
   </h1>
   <button class="border-2 px-1 m-2 text-red-400" @click="inc">

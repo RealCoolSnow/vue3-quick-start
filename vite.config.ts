@@ -7,12 +7,14 @@ import ViteComponents from 'vite-plugin-components'
 import Voie from 'vite-plugin-voie'
 import { viteMockServe } from 'vite-plugin-mock'
 
-const alias = {
-  '/@': path.resolve(__dirname, 'src'),
-}
+const resolve = (dir: string) => path.join(__dirname, dir)
 // doc#https://vitejs.dev/config/#config-file
 const config: UserConfig = {
-  alias,
+  resolve: {
+    alias: {
+      '@': resolve('src'),
+    },
+  },
   build: {
     target: 'es2015',
   },

@@ -1,6 +1,5 @@
-import axios from 'axios'
+import axios, { AxiosRequestConfig, ResponseData } from 'axios'
 import store from '../store'
-import { Get, Post } from './type'
 
 const baseURL: string = import.meta.env.VITE_BASE_URL?.toString() || ''
 
@@ -28,11 +27,23 @@ service.interceptors.response.use(
     return response.data
   },
 )
+/** get & post */
+interface Get {
+  <T>(url: string, params?: object, config?: AxiosRequestConfig): Promise<
+  ResponseData<T>
+  >
+}
+
+interface Post {
+  <T>(url: string, data?: object, config?: AxiosRequestConfig): Promise<
+  ResponseData<T>
+  >
+}
 
 export const get: Get = async(url, params, config) =>
   service.get(url, { params, ...config })
 
 export const post: Post = async(url, data, config) =>
   service.post(url, data, config)
-  
+
 export default service

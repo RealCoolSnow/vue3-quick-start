@@ -3,6 +3,7 @@
     "i18n-ally.keystyle": "nested",
     "i18n-ally.sortKeys": true,
     "vetur.experimental.templateInterpolationService": true,
+    "vetur.validation.style": false,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
     }

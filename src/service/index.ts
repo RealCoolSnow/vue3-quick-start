@@ -1,5 +1,6 @@
 import axios from 'axios'
 import store from '../store'
+import { Get, Post } from './type'
 
 const baseURL: string = import.meta.env.VITE_BASE_URL?.toString() || ''
 
@@ -27,4 +28,11 @@ service.interceptors.response.use(
     return response.data
   },
 )
+
+export const get: Get = async(url, params, config) =>
+  service.get(url, { params, ...config })
+
+export const post: Post = async(url, data, config) =>
+  service.post(url, data, config)
+  
 export default service

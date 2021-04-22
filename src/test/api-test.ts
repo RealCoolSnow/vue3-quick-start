@@ -1,7 +1,7 @@
-import { helloGet, helloPost } from '../service/api'
+import { helloGet2, helloPost } from '../service/api'
 
 export const useHttpTest = () => {
-  helloGet().then((res) => {
+  helloGet2().then((res) => {
     console.log(res)
   }).catch((e) => {
     console.log(e)

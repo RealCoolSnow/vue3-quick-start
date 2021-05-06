@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite --port 3001 --open",
     "build": "cross-env NODE_ENV=production vite build",
+    "build-dev": "cross-env NODE_ENV=production vite build --mode devserver",
     "test": "cross-env NODE_ENV=development jest -i"
   },
   "dependencies": {

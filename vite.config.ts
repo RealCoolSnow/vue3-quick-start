@@ -36,6 +36,16 @@ const config: UserConfig = {
       localEnabled: process.env.NODE_ENV === 'development',
     }),
   ],
+  server: {
+    /** 本地请求转发 */
+    proxy: {
+      '/api/': {
+        target: 'https://url.devserver/',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 }
 
 export default config

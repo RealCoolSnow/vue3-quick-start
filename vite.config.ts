@@ -23,6 +23,21 @@ const config: UserConfig = {
         drop_debugger: true,
       },
     },
+    /* 如需分包时开启 */
+    /*
+    rollupOptions: {
+      output: {
+        // 方式-1:所有依赖都分包
+        // manualChunks(id) {
+        //   if (id.includes('node_modules'))
+        //     return id.toString().split('node_modules/')[1].split('/')[0].toString()
+        // },
+        // 方式-2:只对大的依赖分包
+        manualChunks: {
+          vant: ['vant'], // 要分包的依赖
+        },
+      },
+    }, */
   },
   plugins: [
     Vue(),

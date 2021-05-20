@@ -19,8 +19,8 @@ const config: UserConfig = {
     target: 'es2015',
     terserOptions: {
       compress: {
-        drop_console: true,
-        // pure_funcs: ['console.log'],
+        drop_console: true, // 所有console
+        // pure_funcs: ['console.log'], // 单独指定
         drop_debugger: true,
       },
     },

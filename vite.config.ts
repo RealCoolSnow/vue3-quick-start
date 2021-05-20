@@ -20,6 +20,7 @@ const config: UserConfig = {
     terserOptions: {
       compress: {
         drop_console: true,
+        // pure_funcs: ['console.log'],
         drop_debugger: true,
       },
     },

@@ -43,7 +43,7 @@ const config: UserConfig = {
   plugins: [
     Vue(),
     Voie({
-      importMode: 'sync',
+      importMode: 'async',
     }),
     ViteComponents(),
     viteMockServe({

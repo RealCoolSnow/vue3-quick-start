@@ -6,6 +6,7 @@ import { UserConfig } from 'vite'
 import ViteComponents from 'vite-plugin-components'
 import Voie from 'vite-plugin-voie'
 import { viteMockServe } from 'vite-plugin-mock'
+import viteCompression from 'vite-plugin-compression'
 
 const resolve = (dir: string) => path.join(__dirname, dir)
 // doc#https://vitejs.dev/config/#config-file
@@ -46,6 +47,8 @@ const config: UserConfig = {
       importMode: 'async',
     }),
     ViteComponents(),
+    //gzip压缩 https://github.com/anncwb/vite-plugin-compression
+    viteCompression(),
     viteMockServe({
       mockPath: 'mock',
       watchFiles: true,

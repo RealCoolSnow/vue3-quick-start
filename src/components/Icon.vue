@@ -1,4 +1,3 @@
-
 <template>
   <svg class="icon" aria-hidden="true">
     <use :xlink:href="iconName" />

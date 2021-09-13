@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-unused-vars */
-import path from 'path'
-import Vue from '@vitejs/plugin-vue'
-import { UserConfig } from 'vite'
-import ViteComponents from 'vite-plugin-components'
-import Voie from 'vite-plugin-voie'
-import { viteMockServe } from 'vite-plugin-mock'
-import viteCompression from 'vite-plugin-compression'
+import path from 'path';
+import Vue from '@vitejs/plugin-vue';
+import { UserConfig } from 'vite';
+import ViteComponents from 'vite-plugin-components';
+import Voie from 'vite-plugin-voie';
+import { viteMockServe } from 'vite-plugin-mock';
+import viteCompression from 'vite-plugin-compression';
 
-const resolve = (dir: string) => path.join(__dirname, dir)
+const resolve = (dir: string) => path.join(__dirname, dir);
 // doc#https://vitejs.dev/config/#config-file
 const config: UserConfig = {
   resolve: {
@@ -47,10 +47,10 @@ const config: UserConfig = {
       importMode: 'async',
     }),
     ViteComponents(),
-    //gzip压缩 https://github.com/anncwb/vite-plugin-compression
+    // gzip压缩 https://github.com/anncwb/vite-plugin-compression
     viteCompression(),
     viteMockServe({
-      mockPath: 'mock',
+      mockPath: 'src/mock',
       watchFiles: true,
       localEnabled: process.env.NODE_ENV === 'development',
     }),
@@ -61,10 +61,10 @@ const config: UserConfig = {
       '/api/': {
         target: 'https://url.devserver/',
         changeOrigin: true,
-        rewrite: path => path.replace(/^\/api/, ''),
+        rewrite: (rwPath) => rwPath.replace(/^\/api/, ''),
       },
     },
   },
-}
+};
 
-export default config
+export default config;

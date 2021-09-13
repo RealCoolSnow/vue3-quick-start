@@ -1,4 +1,4 @@
-// module 'app'
+// app - MutationTypes
 enum APP_MutationTypes {
   SET_COUNTER = 'SET_COUNTER',
   SET_LANGUAGE = 'SET_LANGUAGE',

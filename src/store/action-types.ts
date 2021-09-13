@@ -1,4 +1,4 @@
-// module 'app'
+// app - ActionTypes
 enum APP_ActionTypes {
   SET_LANGUAGE = 'SET_LANGUAGE',
 }

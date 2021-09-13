@@ -10,8 +10,8 @@
     "build": "cross-env NODE_ENV=production vite build",
     "build-dev": "cross-env NODE_ENV=production vite build --mode devserver",
     "test": "cross-env NODE_ENV=development jest -i",
-    "f2elint-scan": "f2elint scan",
-    "f2elint-fix": "f2elint fix"
+    "scan": "f2elint scan",
+    "fix": "f2elint fix"
   },
   "dependencies": {
     "@vueuse/core": "^5.0.3",
@@ -35,7 +35,7 @@
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4",
     "ts-jest": "^27.0.3",
-    "typescript": "^4.3.5",
+    "typescript": "4.0.8",
     "vite": "^2.3.8",
     "vite-plugin-components": "^0.11.4",
     "vite-plugin-compression": "^0.3.5",

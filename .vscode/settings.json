@@ -1,10 +1,16 @@
 {
-    "i18n-ally.localesPaths": "locales",
-    "i18n-ally.keystyle": "nested",
-    "i18n-ally.sortKeys": true,
-    "vetur.experimental.templateInterpolationService": true,
-    "vetur.validation.style": false,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-    }
+  "i18n-ally.localesPaths": "locales",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sortKeys": true,
+  "vetur.experimental.templateInterpolationService": true,
+  "vetur.validation.style": false,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
+  "stylelint.validate": ["css", "scss", "less", "acss"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
+    "source.fixAll.markdownlint": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

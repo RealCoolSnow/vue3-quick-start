@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Commit } from 'vuex'
-import ActionTypes from '../action-types'
-import MutationTypes from '../mutation-types'
+import { Commit } from 'vuex';
+import ActionTypes from '../action-types';
+import MutationTypes from '../mutation-types';
 
 const app = {
   state: {
@@ -11,21 +11,19 @@ const app = {
   },
   mutations: {
     [MutationTypes.APP.SET_LANGUAGE]: (state: any, language: string) => {
-      state.language = language
-      sessionStorage.setItem('language', language)
+      state.language = language;
+      sessionStorage.setItem('language', language);
     },
     [MutationTypes.APP.SET_COUNTER]: (state: any, n: number) => {
-      state.counter += n
+      state.counter += n;
     },
   },
   actions: {
     [ActionTypes.APP.SET_LANGUAGE](context: { commit: Commit }, language: string) {
-      context.commit(MutationTypes.APP.SET_LANGUAGE, language)
+      context.commit(MutationTypes.APP.SET_LANGUAGE, language);
     },
   },
-  getters: {
+  getters: {},
+};
 
-  },
-}
-
-export default app
+export default app;

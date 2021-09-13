@@ -9,7 +9,9 @@
     "dev": "cross-env NODE_ENV=development vite --port 3001 --open",
     "build": "cross-env NODE_ENV=production vite build",
     "build-dev": "cross-env NODE_ENV=production vite build --mode devserver",
-    "test": "cross-env NODE_ENV=development jest -i"
+    "test": "cross-env NODE_ENV=development jest -i",
+    "scan": "f2elint scan",
+    "fix": "f2elint fix"
   },
   "dependencies": {
     "@vueuse/core": "^5.0.3",
@@ -20,22 +22,20 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config-vue": "^0.6.6",
     "@types/jest": "^26.0.23",
-    "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@vitejs/plugin-vue": "^1.2.4",
     "@vue/compiler-sfc": "^3.1.2",
     "@vuedx/typescript-plugin-vue": "^0.7.4",
     "autoprefixer": "^10.2.6",
     "cross-env": "^7.0.3",
-    "eslint": "^7.29.0",
+    "f2elint": "^1.2.0",
     "jest": "^27.0.6",
     "mockjs": "^1.1.0",
     "pnpm": "^5.18.7",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4",
     "ts-jest": "^27.0.3",
-    "typescript": "^4.3.5",
+    "typescript": "4.0.8",
     "vite": "^2.3.8",
     "vite-plugin-components": "^0.11.4",
     "vite-plugin-compression": "^0.3.5",
@@ -43,11 +43,10 @@
     "vite-plugin-voie": "^0.7.3",
     "voie-pages": "^0.4.0"
   },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
-  },
-  "eslintConfig": {
-    "extends": "@antfu/eslint-config-vue"
+  "husky": {
+    "hooks": {
+      "pre-commit": "f2elint commit-file-scan",
+      "commit-msg": "f2elint commit-msg-scan"
+    }
   }
 }

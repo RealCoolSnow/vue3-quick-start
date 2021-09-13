@@ -12,39 +12,36 @@
   <h1 @click="showAbout">
     {{ t('app_name') }}
   </h1>
-  <button class="border-2 px-1 m-2 text-red-400" @click="inc">
-    counter - {{ counter }}
-  </button>
-  <button class="border-2 px-1 m-2 text-blue-400" @click="mockTest">
-    mock test
-  </button>
+  <button class="border-2 px-1 m-2 text-red-400" @click="inc">counter - {{ counter }}</button>
+  <button class="border-2 px-1 m-2 text-blue-400" @click="mockTest">mock test</button>
 </template>
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
-import { useStore } from 'vuex'
-import MutationTypes from '../store/mutation-types'
+import { computed, defineComponent } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
+import MutationTypes from '../store/mutation-types';
 
-import { useHttpTest } from '../test/api-test'
+import { useHttpTest } from '../test/api-test';
+
 export default defineComponent({
   setup() {
-    const { t } = useI18n()
-    const store = useStore()
-    const router = useRouter()
-    const counter = computed(() => store.getters.counter)
+    const { t } = useI18n();
+    const store = useStore();
+    const router = useRouter();
+    const counter = computed(() => store.getters.counter);
     const inc = () => {
-      store.commit(MutationTypes.APP.SET_COUNTER, 1)
-    }
+      store.commit(MutationTypes.APP.SET_COUNTER, 1);
+    };
     const showAbout = () => {
-      router.push('/about')
-    }
+      router.push('/about');
+    };
     const mockTest = () => {
-      useHttpTest()
-    }
-    return { t, counter, inc, showAbout, mockTest }
+      useHttpTest();
+    };
+    return { t, counter, inc, showAbout, mockTest };
   },
-})
+});
 </script>
 <style>
 .logo-icon {

@@ -1,16 +1,16 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import axios, { AxiosRequestConfig, ResponseData } from 'axios';
-import store from '../store';
+import store from '../../store';
 
 const baseURL: string = import.meta.env.VITE_BASE_URL?.toString() || '';
 
-const service = axios.create({
+const http = axios.create({
   baseURL,
   timeout: 60000,
   withCredentials: true,
 });
 
-service.interceptors.request.use(
+http.interceptors.request.use(
   (config) => {
     config.params = {
       ...config.params,
@@ -23,7 +23,7 @@ service.interceptors.request.use(
   },
 );
 
-service.interceptors.response.use((response) => {
+http.interceptors.response.use((response) => {
   if (response.status !== 200) return Promise.reject(response.data);
 
   return response.data;
@@ -37,8 +37,8 @@ interface Post {
   <T>(url: string, data?: object, config?: AxiosRequestConfig): Promise<ResponseData<T>>;
 }
 
-export const get: Get = async (url, params, config) => service.get(url, { params, ...config });
+export const get: Get = async (url, params, config) => http.get(url, { params, ...config });
 
-export const post: Post = async (url, data, config) => service.post(url, data, config);
+export const post: Post = async (url, data, config) => http.post(url, data, config);
 
-export default service;
+export default http;

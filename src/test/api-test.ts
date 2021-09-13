@@ -1,4 +1,4 @@
-import { helloGet2, helloPost } from '../service/api';
+import { helloGet2, helloPost } from '../api/common';
 
 export const useHttpTest = () => {
   helloGet2()

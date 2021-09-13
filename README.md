@@ -1,5 +1,6 @@
 <p align='center'>
 ⚡️Quick start project with Vue3 & Vite & TypeScript.<br/>
+（本分支接入阿里巴巴前端规约：https://github.com/alibaba/f2e-spec）
 </p>
 
 ## Features

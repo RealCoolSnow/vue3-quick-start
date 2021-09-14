@@ -1,6 +1,4 @@
-import ActionTypes_APP from './modules/app/action-types';
-import GetterTypes_APP from './modules/app/getter-types';
-import MutationTypes_APP from './modules/app/mutation-types';
+import { ActionTypes_APP, GetterTypes_APP, MutationTypes_APP } from './modules/app/types';
 
 // mutation
 export class MutationTypes {

@@ -1,9 +1,6 @@
-/* eslint-disable no-unused-vars */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Commit } from 'vuex';
-import ActionTypes_APP from './action-types';
-import MutationTypes_APP from './mutation-types';
-import GetterTypes_APP from './getter-types';
+import { MutationTypes_APP, ActionTypes_APP, GetterTypes_APP } from './types';
 
 const app = {
   state: {

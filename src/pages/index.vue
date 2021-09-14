@@ -20,8 +20,7 @@ import { computed, defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
-import MutationTypes from '../store/mutation-types';
-
+import { MutationTypes, GetterTypes } from '../store/types';
 import { useHttpTest } from '../test/api-test';
 
 export default defineComponent({
@@ -29,7 +28,7 @@ export default defineComponent({
     const { t } = useI18n();
     const store = useStore();
     const router = useRouter();
-    const counter = computed(() => store.getters.counter);
+    const counter = computed(() => store.getters[GetterTypes.APP.COUNTER]);
     const inc = () => {
       store.commit(MutationTypes.APP.SET_COUNTER, 1);
     };

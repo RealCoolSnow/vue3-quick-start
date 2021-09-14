@@ -9,7 +9,7 @@ import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useStore } from 'vuex';
 // import ActionTypes from '../store/action-types'
-import MutationTypes from '../store/mutation-types';
+import { MutationTypes } from '../store/types';
 
 export default defineComponent({
   setup() {

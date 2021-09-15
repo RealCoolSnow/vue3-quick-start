@@ -8,7 +8,7 @@
     </router-link>
   </div>
   <!-- <img src="/@/assets/svg/logo.svg" class="logo-icon mx-auto m-4"> -->
-  <Icon name="logo" class="logo-icon mx-auto m-4" />
+  <SvgIcon name="logo" class="logo-icon mx-auto m-4" />
   <h1 @click="showAbout">
     {{ t('app_name') }}
   </h1>

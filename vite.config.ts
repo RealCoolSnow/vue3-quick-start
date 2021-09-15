@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-unused-vars */
-import path from 'path';
+import { join } from 'path';
 import Vue from '@vitejs/plugin-vue';
 import { UserConfig } from 'vite';
 import ViteComponents from 'vite-plugin-components';
@@ -8,7 +8,7 @@ import Voie from 'vite-plugin-voie';
 import { viteMockServe } from 'vite-plugin-mock';
 import viteCompression from 'vite-plugin-compression';
 
-const resolve = (dir: string) => path.join(__dirname, dir);
+const resolve = (dir: string) => join(__dirname, dir);
 // doc#https://vitejs.dev/config/#config-file
 const config: UserConfig = {
   resolve: {
@@ -61,7 +61,7 @@ const config: UserConfig = {
       '/api/': {
         target: 'https://url.devserver/',
         changeOrigin: true,
-        rewrite: (rwPath) => rwPath.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },

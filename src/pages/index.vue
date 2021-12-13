@@ -12,8 +12,18 @@
   <h1 @click="showAbout">
     {{ t('app_name') }}
   </h1>
-  <button class="border-2 px-1 m-2 text-red-400" @click="inc">counter - {{ counter }}</button>
-  <button class="border-2 px-1 m-2 text-blue-400" @click="mockTest">mock test</button>
+  <button
+    class="bg-cyan-500 shadow-xl shadow-cyan-500/50 text-white px-4 py-2 rounded-full mt-4"
+    @click="inc"
+  >
+    counter - {{ counter }}
+  </button>
+  <button
+    class="bg-indigo-500 shadow-xl shadow-indigo-500/50 text-white px-4 py-2 rounded-full ml-4"
+    @click="mockTest"
+  >
+    mock test
+  </button>
 </template>
 <script lang="ts">
 import { computed, defineComponent } from 'vue';

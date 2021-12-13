@@ -1,4 +1,4 @@
-import http, { get } from '../service';
+import http, { get } from './http';
 
 export const helloGet = (params?: any, config?: any) => http.get('hello', { params, ...config });
 

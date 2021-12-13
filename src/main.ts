@@ -7,13 +7,14 @@ import routes from 'voie-pages';
 import App from './App.vue';
 import { createI18nWithLocale } from './locale';
 import store from './store';
+import { GetterTypes } from './store/types';
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
 
-const i18n = createI18nWithLocale(store.getters.language);
+const i18n = createI18nWithLocale(store.getters[GetterTypes.APP.LANGUAGE]);
 
 const app = createApp(App);
 app.use(store);

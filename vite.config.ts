@@ -4,7 +4,7 @@ import { join } from 'path';
 import Vue from '@vitejs/plugin-vue';
 import { UserConfig } from 'vite';
 import ViteComponents from 'vite-plugin-components';
-import Voie from 'vite-plugin-voie';
+import Pages from 'vite-plugin-pages';
 import { viteMockServe } from 'vite-plugin-mock';
 import viteCompression from 'vite-plugin-compression';
 
@@ -43,9 +43,7 @@ const config: UserConfig = {
   },
   plugins: [
     Vue(),
-    Voie({
-      importMode: 'async',
-    }),
+    Pages(),
     ViteComponents(),
     // gzip压缩 https://github.com/anncwb/vite-plugin-compression
     viteCompression(),

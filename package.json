@@ -40,8 +40,7 @@
     "vite-plugin-components": "^0.11.4",
     "vite-plugin-compression": "^0.3.5",
     "vite-plugin-mock": "^2.8.0",
-    "vite-plugin-voie": "^0.7.3",
-    "voie-pages": "^0.4.0"
+    "vite-plugin-pages": "^0.19.3"
   },
   "husky": {
     "hooks": {

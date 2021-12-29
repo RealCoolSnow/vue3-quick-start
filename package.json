@@ -28,7 +28,7 @@
     "@vuedx/typescript-plugin-vue": "^0.7.4",
     "autoprefixer": "latest",
     "cross-env": "^7.0.3",
-    "f2elint": "^1.2.0",
+    "f2elint": "^2.1.0",
     "jest": "^27.0.6",
     "mockjs": "^1.1.0",
     "pnpm": "^5.18.7",

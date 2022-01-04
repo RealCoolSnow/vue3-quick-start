@@ -5,11 +5,11 @@
 
 ## Features
 
-- Vue3, [Vite](https://github.com/vitejs/vite), ESlint -  born with fastness
+- Vue3, [Vite](https://github.com/vitejs/vite), ESlint - born with fastness
 
-- [File based routing](https://github.com/vamplate/vite-plugin-voie)
+- [File based routing](https://github.com/hannoeru/vite-plugin-pages)
 
-- i18n, store, axios, [mock](https://github.com/anncwb/vite-plugin-mock)  - works out-of-box
+- i18n, store, axios, [mock](https://github.com/anncwb/vite-plugin-mock) - works out-of-box
 
 - [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) - CSS framework for rapid UI development
 
@@ -19,7 +19,7 @@
 
 ## Plugins
 
-- [vite-plugin-voie](https://github.com/vamplate/vite-plugin-voie) - File system-based routing plugin
+- [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) - File system-based routing plugin
 
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components) - On-demand components auto-importing
 

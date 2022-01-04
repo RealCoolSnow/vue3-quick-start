@@ -1,7 +1,7 @@
 {
   "name": "vue3-quick-start",
   "description": "Quick start project with Vue3 & Vite & TypeScript.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "author": "CoolSnow(coolsnow2020@gmail.com)",
   "license": "MIT",
@@ -10,8 +10,7 @@
     "build": "cross-env NODE_ENV=production vite build",
     "build-dev": "cross-env NODE_ENV=production vite build --mode devserver",
     "test": "cross-env NODE_ENV=development jest -i",
-    "scan": "f2elint scan",
-    "fix": "f2elint fix"
+    "lint": "eslint \"**/*.{vue,ts,js}\""
   },
   "dependencies": {
     "@vueuse/core": "^7.5.1",
@@ -22,13 +21,15 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@antfu/eslint-config-vue": "^0.14.2",
     "@types/jest": "^27.4.0",
     "@vitejs/plugin-vue": "^2.0.1",
     "@vue/compiler-sfc": "^3.2.26",
     "@vuedx/typescript-plugin-vue": "^0.7.4",
     "autoprefixer": "latest",
     "cross-env": "^7.0.3",
-    "f2elint": "^2.1.0",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
     "jest": "^27.4.5",
     "mockjs": "^1.1.0",
     "pnpm": "^6.24.4",
@@ -42,11 +43,10 @@
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-pages": "^0.19.9"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "f2elint commit-file-scan",
-      "commit-msg": "f2elint commit-msg-scan"
-    }
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
   },
   "jest": {
     "preset": "ts-jest",

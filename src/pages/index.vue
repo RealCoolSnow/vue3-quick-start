@@ -13,44 +13,60 @@
     {{ t('app_name') }}
   </h1>
   <button
-    class="bg-cyan-500 shadow-xl shadow-cyan-500/50 text-white px-4 py-2 rounded-full mt-4"
+    class="
+      bg-cyan-500
+      shadow-xl shadow-cyan-500/50
+      text-white
+      px-4
+      py-2
+      rounded-full
+      mt-4
+    "
     @click="inc"
   >
     counter - {{ counter }}
   </button>
   <button
-    class="bg-indigo-500 shadow-xl shadow-indigo-500/50 text-white px-4 py-2 rounded-full ml-4"
+    class="
+      bg-indigo-500
+      shadow-xl shadow-indigo-500/50
+      text-white
+      px-4
+      py-2
+      rounded-full
+      ml-4
+    "
     @click="mockTest"
   >
     mock test
   </button>
 </template>
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useRouter } from 'vue-router';
-import { useStore } from 'vuex';
-import { MutationTypes, GetterTypes } from '../store/types';
-import { useHttpTest } from '../test/api-test';
+import { computed, defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
+import { useStore } from 'vuex'
+import { GetterTypes, MutationTypes } from '../store/types'
+import { useHttpTest } from '../test/api-test'
 
 export default defineComponent({
   setup() {
-    const { t } = useI18n();
-    const store = useStore();
-    const router = useRouter();
-    const counter = computed(() => store.getters[GetterTypes.APP.COUNTER]);
+    const { t } = useI18n()
+    const store = useStore()
+    const router = useRouter()
+    const counter = computed(() => store.getters[GetterTypes.APP.COUNTER])
     const inc = () => {
-      store.commit(MutationTypes.APP.SET_COUNTER, 1);
-    };
+      store.commit(MutationTypes.APP.SET_COUNTER, 1)
+    }
     const showAbout = () => {
-      router.push('/about');
-    };
+      router.push('/about')
+    }
     const mockTest = () => {
-      useHttpTest();
-    };
-    return { t, counter, inc, showAbout, mockTest };
+      useHttpTest()
+    }
+    return { t, counter, inc, showAbout, mockTest }
   },
-});
+})
 </script>
 <style>
 .logo-icon {

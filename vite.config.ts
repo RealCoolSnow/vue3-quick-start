@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-unused-vars */
-import { join } from 'path';
-import Vue from '@vitejs/plugin-vue';
-import { UserConfig } from 'vite';
-import ViteComponents from 'vite-plugin-components';
-import Pages from 'vite-plugin-pages';
-import { viteMockServe } from 'vite-plugin-mock';
-import viteCompression from 'vite-plugin-compression';
+import { join } from 'path'
+import Vue from '@vitejs/plugin-vue'
+import type { UserConfig } from 'vite'
+import ViteComponents from 'vite-plugin-components'
+import Pages from 'vite-plugin-pages'
+import { viteMockServe } from 'vite-plugin-mock'
+import viteCompression from 'vite-plugin-compression'
 
-const resolve = (dir: string) => join(__dirname, dir);
+const resolve = (dir: string) => join(__dirname, dir)
 // doc#https://vitejs.dev/config/#config-file
 const config: UserConfig = {
   resolve: {
@@ -59,10 +59,10 @@ const config: UserConfig = {
       '/api/': {
         target: 'https://url.devserver/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: path => path.replace(/^\/api/, ''),
       },
     },
   },
-};
+}
 
-export default config;
+export default config

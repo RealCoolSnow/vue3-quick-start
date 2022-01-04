@@ -1,16 +1,20 @@
-import { ActionTypes_APP, GetterTypes_APP, MutationTypes_APP } from './modules/app/types';
+import {
+  ActionTypes_APP,
+  GetterTypes_APP,
+  MutationTypes_APP,
+} from './modules/app/types'
 
 // mutation
 export class MutationTypes {
-  static APP = MutationTypes_APP;
+  static APP = MutationTypes_APP
 }
 
 // action
 export class ActionTypes {
-  static APP = ActionTypes_APP;
+  static APP = ActionTypes_APP
 }
 
 // getter
 export class GetterTypes {
-  static APP = GetterTypes_APP;
+  static APP = GetterTypes_APP
 }

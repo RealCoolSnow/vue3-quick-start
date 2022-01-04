@@ -4,13 +4,16 @@
   "i18n-ally.sortKeys": true,
   "vetur.experimental.templateInterpolationService": true,
   "vetur.validation.style": false,
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
-  "stylelint.validate": ["css", "scss", "less", "acss"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true,
-    "source.fixAll.markdownlint": true
+    "source.fixAll.eslint": true
   },
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

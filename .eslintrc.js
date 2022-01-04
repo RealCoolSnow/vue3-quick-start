@@ -1,8 +1,8 @@
+const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
-  extends: [
-    'eslint-config-ali/typescript/vue',
-    'prettier',
-    'prettier/@typescript-eslint',
-    'prettier/vue',
-  ],
-};
+  extends: ['@antfu/eslint-config-vue'],
+  rules: {
+    'no-console': isProd ? 'warn' : 'off',
+    'no-debugger': isProd ? 'warn' : 'off',
+  },
+}

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-unused-vars */
-import { MockMethod } from 'vite-plugin-mock';
+import type { MockMethod } from 'vite-plugin-mock'
 
 export default [
   {
@@ -11,7 +11,7 @@ export default [
         code: 0,
         msg: 'ok',
         data: 'hello from mock',
-      };
+      }
     },
   },
-] as MockMethod[];
+] as MockMethod[]

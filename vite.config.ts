@@ -7,8 +7,39 @@ import ViteComponents from 'vite-plugin-components'
 import Pages from 'vite-plugin-pages'
 import { viteMockServe } from 'vite-plugin-mock'
 import viteCompression from 'vite-plugin-compression'
+import viteImagemin from 'vite-plugin-imagemin'
 
 const resolve = (dir: string) => join(__dirname, dir)
+
+// https://github.com/vbenjs/vite-plugin-imagemin
+const imageCompress = viteImagemin({
+  gifsicle: {
+    optimizationLevel: 7,
+    interlaced: false,
+  },
+  optipng: {
+    optimizationLevel: 7,
+  },
+  mozjpeg: {
+    quality: 50,
+  },
+  pngquant: {
+    quality: [0.8, 0.9],
+    speed: 4,
+  },
+  svgo: {
+    plugins: [
+      {
+        name: 'removeViewBox',
+      },
+      {
+        name: 'removeEmptyAttrs',
+        active: false,
+      },
+    ],
+  },
+})
+
 // doc#https://vitejs.dev/config/#config-file
 const config: UserConfig = {
   resolve: {
@@ -52,6 +83,7 @@ const config: UserConfig = {
       watchFiles: true,
       localEnabled: process.env.NODE_ENV === 'development',
     }),
+    imageCompress,
   ],
   server: {
     /** 本地请求转发 */

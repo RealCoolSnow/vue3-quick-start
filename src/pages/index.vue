@@ -41,32 +41,27 @@
     mock test
   </button>
 </template>
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
+<script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import { GetterTypes, MutationTypes } from '../store/types'
 import { useHttpTest } from '../test/api-test'
 
-export default defineComponent({
-  setup() {
-    const { t } = useI18n()
-    const store = useStore()
-    const router = useRouter()
-    const counter = computed(() => store.getters[GetterTypes.APP.COUNTER])
-    const inc = () => {
-      store.commit(MutationTypes.APP.SET_COUNTER, 1)
-    }
-    const showAbout = () => {
-      router.push('/about')
-    }
-    const mockTest = () => {
-      useHttpTest()
-    }
-    return { t, counter, inc, showAbout, mockTest }
-  },
-})
+const { t } = useI18n()
+const store = useStore()
+const router = useRouter()
+const counter = computed(() => store.getters[GetterTypes.APP.COUNTER])
+const inc = () => {
+  store.commit(MutationTypes.APP.SET_COUNTER, 1)
+}
+const showAbout = () => {
+  router.push('/about')
+}
+const mockTest = () => {
+  useHttpTest()
+}
 </script>
 <style>
 .logo-icon {

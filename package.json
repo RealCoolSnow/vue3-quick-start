@@ -14,6 +14,12 @@
     "sort": "npx sort-package-json \"package.json\"",
     "test": "cross-env NODE_ENV=development jest -i"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
@@ -41,6 +47,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config-vue": "^0.16.1",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@types/jest": "^27.4.0",
     "@vitejs/plugin-vue": "^2.2.2",
     "@vue/compiler-sfc": "^3.2.31",

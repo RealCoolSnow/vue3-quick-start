@@ -60,7 +60,6 @@
     "cross-env": "^7.0.3",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.4.0",
-    "gulp": "^4.0.2",
     "jest": "^27.5.1",
     "mockjs": "^1.1.0",
     "pnpm": "^6.31.0",

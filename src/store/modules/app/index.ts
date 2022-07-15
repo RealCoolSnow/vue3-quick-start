@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { Commit } from 'vuex'
-import { ActionTypes_APP, GetterTypes_APP, MutationTypes_APP } from './types'
+import { ActionTypes_APP, GetterTypes_APP, MutationTypes_APP } from './type'
 
 const app = {
   state: {
@@ -21,7 +21,7 @@ const app = {
       context: { commit: Commit },
       language: string,
     ) {
-      context.commit(ActionTypes_APP.SET_LANGUAGE, language)
+      context.commit(MutationTypes_APP.SET_LANGUAGE, language)
     },
   },
   getters: {

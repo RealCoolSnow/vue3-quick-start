@@ -2,7 +2,7 @@ import {
   ActionTypes_APP,
   GetterTypes_APP,
   MutationTypes_APP,
-} from './modules/app/types'
+} from './modules/app/type'
 
 // mutation
 export class MutationTypes {

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-unused-vars */
 import { join } from 'path'
 import Vue from '@vitejs/plugin-vue'
 import type { UserConfig } from 'vite'
@@ -50,6 +48,9 @@ const config: UserConfig = {
   },
   build: {
     target: 'es2015',
+    // vite3 use already made esbuild the default minifier for both JS and CSS
+    // https://vitejs.dev/blog/announcing-vite3.html#bundle-size-reduction
+    /*
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -57,7 +58,7 @@ const config: UserConfig = {
         // pure_funcs: ['console.log'], // 单独指定
         drop_debugger: true,
       },
-    },
+    }, */
     /* 如需分包时开启 */
     /*
     rollupOptions: {

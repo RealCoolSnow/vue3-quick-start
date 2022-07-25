@@ -8,9 +8,3 @@ declare module 'axios' {
     data?: T
   }
 }
-
-declare global {
-  interface ImportMeta {
-    env: any
-  }
-}

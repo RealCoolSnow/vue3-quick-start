@@ -1,8 +1,3 @@
-<template>
-  <svg class="icon" aria-hidden="true">
-    <use :xlink:href="iconName" />
-  </svg>
-</template>
 <script setup lang="ts">
 import { computed } from 'vue'
 
@@ -14,6 +9,13 @@ const props = defineProps({
 })
 const iconName = computed(() => `#icon-${props.name}`)
 </script>
+
+<template>
+  <svg class="icon" aria-hidden="true">
+    <use :xlink:href="iconName" />
+  </svg>
+</template>
+
 <style scoped>
 .icon {
   /* width: 1em;

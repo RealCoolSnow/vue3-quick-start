@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { AxiosRequestConfig, ResponseData } from 'axios'
 import axios from 'axios'
 import store from '../../store'
@@ -25,7 +24,8 @@ http.interceptors.request.use(
 )
 
 http.interceptors.response.use((response) => {
-  if (response.status !== 200) return Promise.reject(response.data)
+  if (response.status !== 200)
+    return Promise.reject(response.data)
 
   return response.data
 })
@@ -42,10 +42,10 @@ interface Post {
   >
 }
 
-export const get: Get = async(url, params, config) =>
+export const get: Get = async (url, params, config) =>
   http.get(url, { params, ...config })
 
-export const post: Post = async(url, data, config) =>
+export const post: Post = async (url, data, config) =>
   http.post(url, data, config)
 
 export default http

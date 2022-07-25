@@ -1,3 +1,26 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
+import { useStore } from 'vuex'
+import { useHttpTest } from '../test/api-test'
+import { GetterTypes, MutationTypes } from '@/store/types.d'
+
+const { t } = useI18n()
+const store = useStore()
+const router = useRouter()
+const counter = computed(() => store.getters[GetterTypes.APP.COUNTER])
+const inc = () => {
+  store.commit(MutationTypes.APP.SET_COUNTER, 1)
+}
+const showAbout = () => {
+  router.push('/about')
+}
+const mockTest = () => {
+  useHttpTest()
+}
+</script>
+
 <template>
   <LocaleSwitch />
   <div>
@@ -41,28 +64,7 @@
     mock test
   </button>
 </template>
-<script setup lang="ts">
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
-import { useStore } from 'vuex'
-import { GetterTypes, MutationTypes } from '../store/types'
-import { useHttpTest } from '../test/api-test'
 
-const { t } = useI18n()
-const store = useStore()
-const router = useRouter()
-const counter = computed(() => store.getters[GetterTypes.APP.COUNTER])
-const inc = () => {
-  store.commit(MutationTypes.APP.SET_COUNTER, 1)
-}
-const showAbout = () => {
-  router.push('/about')
-}
-const mockTest = () => {
-  useHttpTest()
-}
-</script>
 <style>
 .logo-icon {
   width: 12em;

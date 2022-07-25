@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import { createI18nWithLocale } from './locale'
 import store from './store'
-import { GetterTypes } from './store/type'
+import { GetterTypes } from '@/store/types.d'
 import routes from '~pages'
 
 const router = createRouter({

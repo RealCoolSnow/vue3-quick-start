@@ -1,3 +1,17 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import { useStore } from 'vuex'
+// import ActionTypes from '../store/action-types'
+import { MutationTypes } from '@/store/types.d'
+
+const { locale } = useI18n()
+const store = useStore()
+const onChange = (e: any) => {
+  store.commit(MutationTypes.APP.SET_LANGUAGE, e.target.value)
+  // store.dispatch(ActionTypes.APP.SET_LANGUAGE, e.target.value)
+}
+</script>
+
 <template>
   <select v-model="locale" class="m-6" @change="onChange">
     <option value="en">
@@ -8,16 +22,3 @@
     </option>
   </select>
 </template>
-<script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import { useStore } from 'vuex'
-// import ActionTypes from '../store/action-types'
-import { MutationTypes } from '../store/types'
-
-const { locale } = useI18n()
-const store = useStore()
-const onChange = (e: any) => {
-  store.commit(MutationTypes.APP.SET_LANGUAGE, e.target.value)
-  // store.dispatch(ActionTypes.APP.SET_LANGUAGE, e.target.value)
-}
-</script>

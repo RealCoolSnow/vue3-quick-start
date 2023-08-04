@@ -11,6 +11,7 @@ const locales = Object.keys(messages)
 
 const createI18nWithLocale = (locale: string): any => {
   return createI18n({
+    legacy: false,
     locale,
     messages,
   })

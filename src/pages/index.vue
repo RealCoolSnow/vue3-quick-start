@@ -2,16 +2,14 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import { useStore } from 'vuex'
 import { useHttpTest } from '../test/api-test'
-import { GetterTypes, MutationTypes } from '@/store/types.d'
+import { useCounterStore } from '@/store/counter'
 
 const { t } = useI18n()
-const store = useStore()
 const router = useRouter()
-const counter = computed(() => store.getters[GetterTypes.APP.COUNTER])
+const counter = useCounterStore()
 function inc() {
-  store.commit(MutationTypes.APP.SET_COUNTER, 1)
+  counter.count++
 }
 function showAbout() {
   router.push('/about')
@@ -47,7 +45,7 @@ function mockTest() {
     "
     @click="inc"
   >
-    counter - {{ counter }}
+    counter - {{ counter.count }}
   </button>
   <button
     class="

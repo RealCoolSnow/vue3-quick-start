@@ -1,6 +1,6 @@
 import type { AxiosRequestConfig, ResponseData } from 'axios'
 import axios from 'axios'
-import store from '../../store'
+import { useAppStore } from '@/store/app'
 
 const baseURL: string = import.meta.env.VITE_BASE_URL?.toString() || ''
 
@@ -14,7 +14,7 @@ http.interceptors.request.use(
   (config) => {
     config.params = {
       ...config.params,
-      lang: store.getters.language,
+      lang: useAppStore().lang,
     }
     return config
   },

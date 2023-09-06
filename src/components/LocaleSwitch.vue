@@ -5,7 +5,9 @@ import { useAppStore } from '@/store/app'
 const { locale } = useI18n()
 const appStore = useAppStore()
 function onChange(e: any) {
-  appStore.lang = e.target.value
+  // appStore.lang = e.target.value
+  appStore.setLang(e.target.value)
+  console.log(appStore.langFullName)
 }
 </script>
 

@@ -1,6 +1,6 @@
 import { helloGet2, helloPost } from '../api/common'
 
-export const useHttpTest = () => {
+export function useHttpTest() {
   helloGet2()
     .then((res) => {
       console.log(res)

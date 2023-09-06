@@ -9,7 +9,7 @@ const messages = {
 
 const locales = Object.keys(messages)
 
-const createI18nWithLocale = (locale: string): any => {
+function createI18nWithLocale(locale: string): any {
   return createI18n({
     legacy: false,
     locale,

@@ -10,13 +10,13 @@ const { t } = useI18n()
 const store = useStore()
 const router = useRouter()
 const counter = computed(() => store.getters[GetterTypes.APP.COUNTER])
-const inc = () => {
+function inc() {
   store.commit(MutationTypes.APP.SET_COUNTER, 1)
 }
-const showAbout = () => {
+function showAbout() {
   router.push('/about')
 }
-const mockTest = () => {
+function mockTest() {
   useHttpTest()
 }
 </script>

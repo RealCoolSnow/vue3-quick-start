@@ -1,10 +1,11 @@
-import { join } from 'path'
+import { join } from 'node:path'
 import Vue from '@vitejs/plugin-vue'
 import type { UserConfig } from 'vite'
 import ViteComponents from 'vite-plugin-components'
 import Pages from 'vite-plugin-pages'
 import { viteMockServe } from 'vite-plugin-mock'
 import viteCompression from 'vite-plugin-compression'
+
 // import viteImagemin from 'vite-plugin-imagemin'
 
 const resolve = (dir: string) => join(__dirname, dir)
@@ -77,14 +78,23 @@ const config: UserConfig = {
   },
   plugins: [
     Vue(),
-    Pages(),
+    // https://github.com/hannoeru/vite-plugin-pages
+    Pages({
+      dirs: [
+        // basic
+        { dir: 'src/pages', baseRoute: '' },
+        // features dir for pages
+        // { dir: 'src/features/**/pages', baseRoute: 'features' },
+        // with custom file pattern
+        // { dir: 'src/admin/pages', baseRoute: 'admin', filePattern: '**/*.page.*' },
+      ],
+    }),
     ViteComponents(),
     // gzip压缩 https://github.com/anncwb/vite-plugin-compression
     viteCompression(),
     viteMockServe({
       mockPath: 'src/mock',
       watchFiles: true,
-      localEnabled: process.env.NODE_ENV === 'development',
     }),
     // imageCompress,
   ],
